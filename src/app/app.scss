@@ -28,8 +28,11 @@
   gap: 10px;
   z-index: 1001;
 
-  .logo-icon {
-    font-size: 2rem;
+  .logo-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   }
 
@@ -966,8 +969,11 @@
     gap: 10px;
     margin-bottom: 16px;
 
-    .logo-icon {
-      font-size: 1.8rem;
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     .logo-text {
