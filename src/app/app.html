@@ -263,7 +263,7 @@
             <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
           </div>
         } @else {
-          <form class="contact-form" (ngSubmit)="onSubmit()" #contactFormRef="ngForm">
+          <form class="contact-form" (ngSubmit)="contactFormRef.valid && onSubmit()" #contactFormRef="ngForm">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name</label>

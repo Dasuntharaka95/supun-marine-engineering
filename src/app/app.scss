@@ -925,6 +925,11 @@
       background: var(--white);
       box-shadow: 0 0 0 4px rgba(0, 119, 182, 0.1);
     }
+
+    &.ng-invalid.ng-touched {
+      border-color: #e53e3e;
+      box-shadow: 0 0 0 4px rgba(229, 62, 62, 0.1);
+    }
   }
 
   textarea {
