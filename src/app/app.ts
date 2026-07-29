@@ -31,6 +31,16 @@ interface NavItem {
   href: string;
 }
 
+interface TeamMember {
+  name: string;
+  role: string;
+  phone: string;
+  email: string;
+  image: string;
+  badge: string;
+  bio: string;
+}
+
 @Component({
   selector: 'app-root',
   imports: [CommonModule, FormsModule],
@@ -49,8 +59,48 @@ export class App {
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#services' },
+    { label: 'Leadership', href: '#team' },
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'Contact', href: '#contact' },
+  ];
+
+  teamMembers: TeamMember[] = [
+    {
+      name: 'SUPUN SASITHA WEERASINGHA KULATHUNGA',
+      role: 'Owner & Managing Director',
+      phone: '+(94)763150859',
+      email: 'supunengineering7@gmail.com',
+      image: 'assets/team/supun_kulathunga.jpg',
+      badge: 'Managing Director',
+      bio: 'Directing strategic vision, engineering operations, and overall growth for SUPUN ENGINEERING.'
+    },
+    {
+      name: 'SUDAM BODDHIKA',
+      role: 'Senior Engineering Supervisor',
+      phone: '+(94)763150859',
+      email: 'supunengineering7@gmail.com',
+      image: 'assets/team/sudam_boddhika.jpg',
+      badge: 'Senior Supervisor',
+      bio: 'Overseeing comprehensive ship maintenance, mechanical overhauls, and structural repair operations.'
+    },
+    {
+      name: 'THILINA ASIRI SENAVIRATHNA',
+      role: 'Senior Electrical Supervisor',
+      phone: '+(94)763150859',
+      email: 'supunengineering7@gmail.com',
+      image: 'assets/team/thilina_senavirathna.jpg',
+      badge: 'Electrical Lead',
+      bio: 'Managing complex marine electrical installations, power distribution, and navigation systems.'
+    },
+    {
+      name: 'LALITHA SHAMAL',
+      role: 'Senior Adviser',
+      phone: '+(94)763150859',
+      email: 'supunengineering7@gmail.com',
+      image: 'assets/team/lalitha_shamal.jpg',
+      badge: 'Senior Adviser',
+      bio: 'Providing strategic technical direction, regulatory compliance advisory, and project governance.'
+    }
   ];
 
   stats: Stat[] = [
@@ -201,7 +251,7 @@ export class App {
   }
 
   private updateActiveSection(): void {
-    const sections = ['home', 'about', 'services', 'portfolio', 'contact'];
+    const sections = ['home', 'about', 'services', 'team', 'portfolio', 'contact'];
     for (const id of sections.reverse()) {
       const el = this.document.getElementById(id);
       if (el) {
